@@ -13,11 +13,11 @@ repositories {
     mavenCentral()
 }
 
-jacocoTestReport {
-    reports {
-        csv.enabled true
-    }
-}
+//jacocoTestReport {
+//    reports {
+//        csv.enabled true
+//    }
+//}
 
 
 dependencies {
@@ -33,7 +33,7 @@ dependencies {
 }
 
 group = 'com.thoughtworks'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 description = 'spring-boot-employee'
 sourceCompatibility = '1.8'
 
