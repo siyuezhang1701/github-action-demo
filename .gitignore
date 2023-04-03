@@ -32,3 +32,8 @@ build/
 
 ### gradle ###
 .gradle
+
+bin
+
+**/.DS_Store
+

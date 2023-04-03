@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  employee-api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - employee-db
+    environment:
+      - spring_datasource_url=jdbc:mysql://employee-db:3306/db_employee
+      - spring_datasource_username=myUser
+      - spring_datasource_password=123456
+      - spring_datasource_platform=mysql
+  employee-db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=db_employee
+      - MYSQL_USER=myUser
+      - MYSQL_PASSWORD=123456
+    ports:
+      - "3306:3306"
